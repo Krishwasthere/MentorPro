@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color: #fff;
+    color: white;
+    padding: 1px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    font-size: 2em;
+    color: rgb(0, 0, 0);
+    user-select: none;
+    font-weight: 350;
+
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 50px;
+}
+
+.navigation a::after {
+
+    content: '';
+    position: relative;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #000000;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1)
+}
+
+.navigation .btnLogin-popup {
+    width: 130vw;
+    height: 50vh;
+    background: transparent;
+    border: 2px solid #000000;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #000000;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+
+.navigation .btnLogin-popup:hover {
+    background: #000000;
+    color: #000000;
+    
+}
+body {
+    color: #333; /* Or any other color you prefer */
+}
+
+
+.logo {
+    width: 90px;
+    display: flex;
+
+}
+
+.dropdown {
+    position: fixed; /* Necessary for positioning the dropdown menu */
+    top: 23px;
+    left: 32.5%;
+  }
+  
+  .dropdown-toggle {
+    display: block;
+    padding: 10px; /* Adjust padding as needed */
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%; /* Position below the link */
+    margin-left: 50px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Adjust width as needed */
+    z-index: 1; /* Ensure it appears above other elements */
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block; /* Show the dropdown menu on hover */
+  }
+  
+  .hola {
+    position: absolute; /* Use `position: absolute` for precise control */
+    top: 0; /* Position at the top */
+    left: 55%; /* Center horizontally */
+    transform: translateX(-55%); /* Adjust for centering */
+    width: 100vs;
+    height: 100vs;
+
+  }
+
+  .extra a {
+    position: absolute;
+    top: 600px; /* Adjust the top value to control the position */
+    left: 33%;
+    transform: translateX(-50%);
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: #171717;
+    border: #f9f9f9;
+    font-size: larger;
+    box-shadow: #000000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  .extra2 a {
+    position: absolute;
+    top: 600px; /* Adjust the top value to control the position */
+    left: 20%;
+    transform: translateX(-50%);
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: #f9fff9;
+    border: #f9f9f9;
+    font-size: larger;
+    box-shadow: #000000;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  .ops {
+    position: absolute;
+    top: 170px; /* Adjust the top value to control the position */
+    left: 23%;
+    transform: translateX(-50%);
+
+  }
+
+
+  .extra a:hover {
+    padding: 30px 50px;
+    transition: .5s;
+  }
+
+  .extra2 a:hover {
+    padding: 30px 50px;
+    transition: .5s;
+  }
+
+

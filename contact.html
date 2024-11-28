@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="contact.css">
+
+  <style>
+    /* Top bar styles */
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #D1E231;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      font-family: Poppins, sans-serif;
+      font-size: 20px;
+    }
+
+    /* Team section styles */
+    #team {
+      text-align: center;
+      margin-top: 100px;
+      font-family: Poppins, sans-serif; /* Apply Poppins font to the entire section */
+    }
+
+    /* Team member styles */
+    .team-members {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .team-member {
+      text-align: center;
+      margin: 20px;
+      width: 200px;
+      font-family: Poppins, sans-serif; /* Apply Poppins font to team members */
+    }
+
+    .team-member img {
+      width: 150px;
+      border-radius: 50%;
+    }
+    .right-section {
+    width: 100px; /* Or use a percentage like 20% */
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="left-section">
+      Contact Us
+    </div>
+    <div class="right-section">
+      <a href="index.html">Home</a></div>
+  </div>
+
+  <section id="team">
+    <form action="https://formsubmit.co/84eb181051b62de36afd7f2b3b78f1f6" method="POST">
+      <input type="text" name="_honey" style="display: none;">
+
+      <!--DIsable Captcha for submit :) yay-->
+      <input type="hidden" name="_captcha" value="false">
+
+
+      <!--Adding a success page for the Contact Form-->
+      <input type="hidden" name="_next" value="successcontact.html"> 
+
+      <h2>Contact Us</h2>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit">Send</button>
+    </form>
+
+        </div>
+        </p>
+      </div>
+    </div>
+  
+
+  </section>
+</body>
+</html>
