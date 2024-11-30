@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - MentorPro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    
+    /* Login Container */
+    .login-container {
+      background-color: white;
+      border-radius: 12px;
+      padding: 40px 50px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    /* Title */
+    h1 {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    /* Input Styles */
+    .input-field {
+      width: 100%;
+      padding: 14px;
+      margin: 15px 0;
+      background-color: #f5f5f7;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-size: 16px;
+      color: #333;
+      transition: border-color 0.3s ease;
+    }
+
+    .input-field:focus {
+      outline: none;
+      border-color: #0071e3; /* Apple blue */
+    }
+
+    .input-field.error {
+      border-color: #e74c3c;
+    }
+
+    /* Login Button */
+    .login-button {
+      width: 100%;
+      padding: 14px;
+      background-color: #0071e3;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-button:hover {
+      background-color: #005bb5;
+    }
+
+    /* Footer Link */
+    .footer-link {
+      color: #0071e3;
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 20px;
+      display: inline-block;
+    }
+
+    .footer-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Sign Up Button (Apple-like) */
+    .signup-button {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      margin-top: 20px;
+      background-color: #f5f5f7;
+      border: 1px solid #0071e3;
+      color: #0071e3;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .signup-button:hover {
+      background-color: #0071e3;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Login Container -->
+  <div class="login-container">
+    <h1>Sign In</h1>
+
+    <!-- Login Form -->
+    <form id="loginForm" onsubmit="return validateForm()">
+      
+      <!-- Username/Email Input -->
+      <input type="text" id="username" class="input-field" placeholder="Email or Username" required>
+
+      <!-- Password Input -->
+      <input type="password" id="password" class="input-field" placeholder="Password" required>
+
+      <!-- Login Button -->
+      <button type="submit" class="login-button">Sign In</button>
+    </form>
+
+    <!-- Footer Link for "Forgot Password" -->
+    <a href="#" class="footer-link">Forgot Password?</a>
+
+    <!-- Sign Up Button -->
+    <button class="signup-button" onclick="window.location.href='signup.html'">Don't have an account? Sign Up</button>
+  </div>
+
+  <!-- JavaScript for Form Validation -->
+  <script>
+    function validateForm() {
+      const username = document.getElementById('username');
+      const password = document.getElementById('password');
+
+      // Reset errors
+      username.classList.remove('error');
+      password.classList.remove('error');
+
+      // Simple validation
+      let valid = true;
+
+      // Check if username is empty
+      if (username.value === "") {
+        username.classList.add('error');
+        valid = false;
+      }
+
+      // Check if password is empty
+      if (password.value === "") {
+        password.classList.add('error');
+        valid = false;
+      }
+
+      // If form is valid, submit
+      if (valid) {
+        // For demonstration purposes: Log input values (this is where you'd submit the form)
+        console.log('Username:', username.value);
+        console.log('Password:', password.value);
+      }
+
+      // Return false to prevent form submission for now (so we can simulate validation)
+      return valid;
+    }
+  </script>
+
+</body>
+</html>

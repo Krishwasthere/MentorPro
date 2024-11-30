@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - MentorPro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Basic styles (same as before) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Sign-Up Container */
+    .signup-container {
+      background-color: white;
+      border-radius: 12px;
+      padding: 40px 50px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    /* Title */
+    h1 {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    /* Input Fields */
+    .input-field {
+      width: 100%;
+      padding: 14px;
+      margin: 15px 0;
+      background-color: #f5f5f7;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .input-field:focus {
+      outline: none;
+      border-color: #0071e3;
+    }
+
+    .signup-button {
+      width: 100%;
+      padding: 14px;
+      background-color: #0071e3;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .signup-button:hover {
+      background-color: #005bb5;
+    }
+
+    /* Language Switcher */
+    .language-switcher {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+
+    .language-button {
+      background-color: transparent;
+      border: none;
+      font-size: 16px;
+      color: #0071e3;
+      cursor: pointer;
+    }
+
+    .language-button:hover {
+      text-decoration: underline;
+    }
+
+    .footer-link {
+      color: #0071e3;
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 20px;
+      display: inline-block;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Sign-Up Container -->
+  <div class="signup-container">
+    <div class="language-switcher">
+      <button class="language-button" onclick="switchLanguage('en')">English</button>
+      <button class="language-button" onclick="switchLanguage('es')">Español</button>
+    </div>
+
+    <h1 id="signUpTitle">Sign Up</h1>
+
+    <form id="signupForm" onsubmit="return submitForm()">
+      <input type="email" id="email" class="input-field" placeholder="Email" required>
+      <input type="password" id="password" class="input-field" placeholder="Password" required>
+      <input type="password" id="confirmPassword" class="input-field" placeholder="Confirm Password" required>
+
+      <button type="submit" class="signup-button" id="signupButton">Sign Up</button>
+    </form>
+
+    <a href="login.html" class="footer-link" id="loginLink">Already have an account? Sign In</a>
+  </div>
+
+  <script>
+    // Language Data
+    const languages = {
+      en: {
+        signUpTitle: "Sign Up",
+        emailPlaceholder: "Email",
+        passwordPlaceholder: "Password",
+        confirmPasswordPlaceholder: "Confirm Password",
+        signupButton: "Sign Up",
+        loginLink: "Already have an account? Sign In"
+      },
+      es: {
+        signUpTitle: "Regístrate",
+        emailPlaceholder: "Correo electrónico",
+        passwordPlaceholder: "Contraseña",
+        confirmPasswordPlaceholder: "Confirmar contraseña",
+        signupButton: "Regístrate",
+        loginLink: "¿Ya tienes una cuenta? Iniciar sesión"
+      }
+    };
+
+    // Switch Language Function
+    function switchLanguage(language) {
+      document.getElementById('signUpTitle').textContent = languages[language].signUpTitle;
+      document.getElementById('email').placeholder = languages[language].emailPlaceholder;
+      document.getElementById('password').placeholder = languages[language].passwordPlaceholder;
+      document.getElementById('confirmPassword').placeholder = languages[language].confirmPasswordPlaceholder;
+      document.getElementById('signupButton').textContent = languages[language].signupButton;
+      document.getElementById('loginLink').textContent = languages[language].loginLink;
+    }
+
+    // Form Submit Logic
+    function submitForm() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+
+      if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+        return false;
+      }
+
+      // You would send data to the server here (e.g., using fetch or AJAX)
+      console.log("Form submitted:", { username, password });
+      return false; // prevent form from actually submitting for now
+    }
+  </script>
+
+</body>
+</html>
